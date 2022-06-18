@@ -1,0 +1,33 @@
+.upper-panel{
+    height: 6vh;
+    background-color: transparent!important;
+    z-index: 99999;
+    position: relative;
+    justify-content: center;
+}
+
+.background-blur{
+    position: absolute;
+    width: 100vw;
+    height: 6vh;
+    background-color: black;
+    filter: blur(1vh);
+    z-index: 9998;
+}
+
+.toolbar{
+    z-index: 99999;
+    align-self: center!important;
+    justify-content: center!important;
+    width: 60vw!important;
+}
+
+.separator{
+    font-size: 1vw!important;
+}
+
+.logo{
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+}

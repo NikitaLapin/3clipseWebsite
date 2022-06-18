@@ -1,0 +1,49 @@
+.cards{
+    flex-direction: column;
+    position: absolute;
+    margin-bottom: 4vh;
+    display: flex;
+    top: 38vh;
+    justify-content: space-between;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: auto;
+    width: 60vw;
+    margin-bottom: 4vh;
+}
+
+.card-text{
+    width: 30vw;
+    font-size: 2vw;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    text-align: center;
+}
+
+.card-text-title{
+    font-size:  5.3vh!important;
+    padding-left: 1vw!important;
+}
+
+.card-image{
+    height: inherit;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    justify-self: end;
+    width: 28vw;
+}
+
+.card-blur{
+    position: relative;
+}
+
+.card-blur:after{
+    content: '';
+    top:0; left:0; right:0; bottom:0;
+    position: absolute;
+    box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
+}

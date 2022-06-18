@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    align-content: center;
+}
+
+html{
+    overflow-x: hidden;
+    scrollbar-base-color: brown!important;
+}
+
+.App{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.screen-filler{
+    display: flex;
+    z-index: 9;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(7, 15, 16, 1);
+    justify-content: space-around;
+}
+
+.background-image{
+    background-image: url(../imports/main-background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100vw;
+    margin: 0 0;
+}
+
+.container-home{
+    position: absolute;
+    top: 6vh;
+    left: 20%;
+    width: 60vw;
+    height: 100vh;
+    justify-content: space-around;
+}
+
+.void-1{
+    position: relative;
+    width: inherit;
+    height: 20vh;
+}
+
+.transition-blur{
+    z-index: 10;
+
+    margin: 0 auto;
+    top: 95vh;
+
+    position: absolute;
+    width: 110vw;
+    height: 17vh;
+
+    background: linear-gradient(360deg, #000000 0%, #081214 69.37%, #09171A 101.65%, rgba(104, 104, 104, 0.5) 136.83%);
+    filter: blur(1vh);
+}
+
+.black-image{
+    display: flex;
+    position: absolute;
+    top: 100vh;
+    width: 100vw;
+    height: 300vh;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.container-about{
+    position: absolute;
+    top: 15vh;
+    left: 20%;
+    width: 60vw;
+    height: inherit;
+    justify-content: space-around;
+}
+
+.stretch-screen-text{
+    width: 60vw;
+    font-size: 2vw;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.background-image-news{
+    display: flex;
+    position: absolute;
+    left: 20vw;
+    top: 400vh;
+    width: 100vw;
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../imports/3clipse_logo.jpg);
+
+    box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
+}
+
+.transition-blur-2{
+    z-index: 10;
+
+    margin: 0 auto;
+    top: 395vh;
+
+    position: absolute;
+    width: 110vw;
+    height: 17vh;
+
+    background: linear-gradient(360deg, #000000 0%, #000000 69.37%, #000000 96.82%, rgba(48, 48, 48, 0.5) 136.83%);
+    filter: blur(1vh);
+}
+
+.news-text-block{
+    display: flex;
+    position: absolute;
+    width: 40vw;
+    height: 82vh;
+    top: 420vh;
+    left: 20vw;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.news-title{
+    font-size: 3.5vw;
+    color: rgba(255, 131, 68, 1);
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 1vh;
+}
+
+.news-container{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-gutter: both-edges;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 2vw;
+    padding-left: 2vw;
+    direction: rtl;
+}
+
+.scrollbar-back{
+    display: flex;
+    background-color: rgba(56,50,50,1);
+    margin-top: 14vh;
+    margin-right: 3vw;
+    width: 1vw;
+    border-radius: 5vw;
+    justify-content: center;
+}
+
+.scrollbar-bar{
+    position: absolute;
+
+    top: 20vh;
+    width: 0.8vw;
+    height: 20vh;
+    background-color: gray;
+    border-radius: 1vw;
+}
+
+.black-image-2{
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    top: 400vh;
+    width: 100vw;
+    height: 450vh;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.transition-blur-3{
+    z-index: 10;
+
+    margin: 0 auto;
+    top: 550vh;
+
+    position: absolute;
+    width: 110vw;
+    height: 20vh;
+
+    background: linear-gradient(360deg, #000000 0%, #000000 69.37%, #000000 96.82%, rgba(48, 48, 48, 0.5) 136.83%);
+    filter: blur(1vh);
+}
+
+.gallery-container{
+    position: absolute;
+    top: 570vh;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: auto;
+    left: 17vw;
+    justify-self: center;
+}
+
+.image{
+    display: flex;
+    position: absolute;
+    width: 60vw;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../imports/3clipse_gallery1.jpg);
+
+    box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
+    filter: blur(0.2vh);
+}
+
+.title{
+    display: flex;
+    position: relative;
+    left: 12.5vw;
+    font-size: 3.5vw;
+    color: rgba(255, 131, 68, 1);
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    align-self: center;
+}
+
+.images-gallery{
+    z-index: 5;
+    position: inherit;
+    top: 35vh;
+    width: 60vw;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-image{
+    padding: 1vh;
+    width: 19vw;
+}
+
+.horizontal-scrollbar-back{
+    position: relative;
+    top: 140vh;
+    display: flex;
+    background-color: rgba(56,50,50,1);
+    margin-top: 14vh;
+    margin-left: 3vw;
+    width: 60vw;
+    height: 2vh;
+    left: -3vw;
+    border-radius: 5vw;
+    justify-content: center;
+}
+
+.horizontal-scrollbar-bar{
+    position: absolute;
+    width: 40vw;
+    height: 2vh;
+    background-color: gray;
+    border-radius: 1vw;
+}
+
+.image-2{
+    z-index: 9;
+    display: flex;
+    position: absolute;
+    top: 730vh;
+    left: 17vw;
+    width: 60vw;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../imports/3clipse_gallery1.jpg);
+
+    box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
+    filter: blur(0.2vh);
+}
+
+.team-info-container{
+    display: flex;
+    position: absolute;
+    top: 775vh;
+
+    width: 60vw;
+    height: 35vh;
+
+    left: 17vw;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team-text{
+    width: auto;
+    font-size: 2vw;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    text-align: center;
+}
+
+.description{
+    padding-top: 2vh!important;
+    padding-left: 7vw!important;
+    max-width: 40vw!important;
+}
+
+.git-link{
+    position: absolute;
+    left: 25vw;
+    width: 10vw;
+}
