@@ -1,0 +1,48 @@
+.image-2{
+    z-index: 9;
+    display: flex;
+    position: absolute;
+    top: 730vh;
+    left: 17vw;
+    width: 60vw;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./imports/3clipse_gallery1.jpg);
+
+    box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
+    filter: blur(0.2vh);
+}
+
+.team-info-container{
+    display: flex;
+    position: absolute;
+    top: 775vh;
+
+    width: 60vw;
+    height: 35vh;
+
+    left: 17vw;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team-text{
+    width: auto;
+    font-size: 2vw;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    text-align: center;
+}
+
+.description{
+    padding-top: 2vh!important;
+    padding-left: 7vw!important;
+    max-width: 40vw!important;
+}
+
+.git-link{
+    position: absolute;
+    left: 25vw;
+    width: 10vw;
+}

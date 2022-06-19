@@ -1,0 +1,85 @@
+.gallery-container{
+    position: absolute;
+    top: 570vh;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: auto;
+    left: 17vw;
+    justify-self: center;
+}
+
+.image{
+    display: flex;
+    position: absolute;
+    width: 60vw;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(imports/3clipse_gallery1.jpg);
+
+    box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
+    filter: blur(0.2vh);
+}
+
+.title{
+    display: flex;
+    position: relative;
+    left: 12.5vw;
+    font-size: 3.5vw;
+    color: rgba(255, 131, 68, 1);
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    align-self: center;
+}
+
+.images-gallery{
+    z-index: 5;
+    position: inherit;
+    top: 35vh;
+    width: 60vw;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-image{
+    object-fit: cover;
+    padding: 1vh!important;
+    width: 19vw!important;
+    height: 30vh;
+}
+
+.horizontal-scrollbar-back{
+    position: relative;
+    top: 130vh;
+    display: flex;
+    background-color: rgba(56,50,50,1);
+    margin-top: 14vh;
+    margin-left: 3vw;
+    width: 60vw;
+    height: 1vh;
+    left: -3vw;
+    border-radius: 5vw;
+    justify-content: center;
+}
+
+.horizontal-scrollbar-bar{
+    position: absolute;
+    width: 40vw;
+    height: 1vh;
+    background-color: gray;
+    border-radius: 1vw;
+}

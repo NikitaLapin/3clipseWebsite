@@ -1,0 +1,37 @@
+.black-image{
+    display: flex;
+    position: absolute;
+    top: 100vh;
+    width: 100vw;
+    height: 300vh;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.black-image{
+    display: flex;
+    position: absolute;
+    top: 100vh;
+    width: 100vw;
+    height: 300vh;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.stretch-screen-text{
+    width: 60vw;
+    font-size: 1.9vw;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.container-about{
+    position: absolute;
+    top: 15vh;
+    left: 20%;
+    width: 60vw;
+    height: inherit;
+    justify-content: space-around;
+}

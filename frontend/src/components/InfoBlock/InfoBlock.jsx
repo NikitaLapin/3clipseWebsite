@@ -15,9 +15,6 @@ const InfoBlock = (props) => {
                 <div className='infoblock-descriptor'>
                     <b>{props.description}</b>
                 </div>
-                <Link to='container-about' smooth>
-                    <NavButton title='. More Info .' className='infoblock-button'/>
-                </Link>
             </div>
         </Link>
     );
