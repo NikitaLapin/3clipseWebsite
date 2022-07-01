@@ -1,12 +1,10 @@
 *{
     padding: 0;
     margin: 0;
-    align-content: center;
 }
 
 html{
     overflow-x: hidden;
-    scrollbar-base-color: brown!important;
 }
 
 .App{
@@ -15,55 +13,7 @@ html{
     height: 100vh;
 }
 
-.transition-blur{
-    z-index: 10;
-
-    margin: 0 auto;
-    top: 95vh;
-
-    position: absolute;
-    width: 110vw;
-    height: 17vh;
-
-    background: linear-gradient(360deg, #000000 0%, #081214 69.37%, #09171A 101.65%, rgba(104, 104, 104, 0.5) 136.83%);
-    filter: blur(1vh);
+.wrapper{
+    align-items: center;
 }
 
-.transition-blur-2{
-    z-index: 10;
-
-    margin: 0 auto;
-    top: 395vh;
-
-    position: absolute;
-    width: 110vw;
-    height: 17vh;
-
-    background: linear-gradient(360deg, #000000 0%, #000000 69.37%, #000000 96.82%, rgba(48, 48, 48, 0.5) 136.83%);
-    filter: blur(1vh);
-}
-
-.black-image-2{
-    z-index: -1;
-    display: flex;
-    position: absolute;
-    top: 400vh;
-    width: 100vw;
-    height: 450vh;
-    background-color: black;
-    margin: 0 auto;
-}
-
-.transition-blur-3{
-    z-index: 10;
-
-    margin: 0 auto;
-    top: 550vh;
-
-    position: absolute;
-    width: 110vw;
-    height: 20vh;
-
-    background: linear-gradient(360deg, #000000 0%, #000000 69.37%, #000000 96.82%, rgba(48, 48, 48, 0.5) 136.83%);
-    filter: blur(1vh);
-}

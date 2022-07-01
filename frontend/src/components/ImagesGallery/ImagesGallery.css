@@ -1,0 +1,19 @@
+.row{
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: scroll;
+    justify-content: space-between;
+
+    overflow-y: hidden;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 70vh;
+    max-height: 80vh;
+
+    margin: 0.1vw;
+}

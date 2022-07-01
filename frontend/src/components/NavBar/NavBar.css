@@ -1,33 +1,72 @@
 .upper-panel{
-    height: 6vh;
-    background-color: transparent!important;
-    z-index: 99999;
-    position: relative;
+    z-index: 10;
+
+    display: flex;
     justify-content: center;
+
+    height: 6vh;
+    width: 100vw;
+    background-color: transparent!important;
 }
 
-.background-blur{
+.upper-blur{
+    z-index: 4;
     position: absolute;
+
     width: 100vw;
-    height: 6vh;
+    height: inherit;
+
     background-color: black;
     filter: blur(1vh);
-    z-index: 9998;
 }
 
 .toolbar{
-    z-index: 99999;
-    align-self: center!important;
-    justify-content: center!important;
-    width: 60vw!important;
+    align-self: center;
+    justify-content: space-between;
+    z-index: 5;
+    width: 60vw;
 }
 
-.separator{
-    font-size: 1vw!important;
-}
+@media (orientation: landscape) {
+    .separator {
+        font-size: 1vw !important;
+    }
 
-.logo{
-    width: 5vw;
-    height: auto;
-    cursor: pointer;
+    .logo {
+        width: 5vw;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .logo:hover{
+        transform: scale(1.1);
+    }
+
+    .nav-buttons {
+        display: flex;
+        width: 52vw;
+        justify-content: space-between !important;
+    }
+
+    .button-1 {
+        position: relative;
+        width: 7vw!important;
+        height: 4vh!important;
+        font-size: 2vw !important;
+        padding-bottom: 1vh;
+    }
+
+    .button-active{
+        background-size: 100% 100%;
+        background-position: bottom;
+        background-image: url("./imports/OilPaint.png");
+    }
+
+    .button-2 {
+        position: relative;
+        width: 8vw!important;
+        padding-bottom: 1vh;
+        height: 4vh!important;
+        font-size: 2vw !important;
+    }
 }

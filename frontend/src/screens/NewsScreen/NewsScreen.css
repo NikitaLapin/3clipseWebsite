@@ -1,70 +1,27 @@
-.background-image-news{
-    display: flex;
-    position: absolute;
-    left: 20vw;
-    top: 400vh;
-    width: 100vw;
-    height: 150vh;
-    background-size: cover;
-    background-position: center;
-    background-image: url(./imports/3clipse_logo.jpg);
+@media (orientation: landscape){
+    .about-to-news-transition{
+        z-index: 2;
+        position: absolute;
+        background: linear-gradient(360deg, #000000 0%, #000000 69.37%, #000000 96.82%, rgba(48, 48, 48, 0.5) 136.83%);
+        filter: blur(1vh);
+        top: -5vh;
+        width: 100vw;
+        height: 10vh;
+    }
 
-    box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
-}
+    .container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-.news-text-block{
-    display: flex;
-    position: absolute;
-    width: 40vw;
-    height: 82vh;
-    top: 420vh;
-    left: 20vw;
-    justify-content: center;
-    flex-direction: row;
-}
+        margin-bottom: 10vh;
+    }
 
-.news-title{
-    font-size: 3.5vw;
-    color: rgba(255, 131, 68, 1);
-    text-align: center;
-    font-family: 'Indie Flower', cursive;
-    margin-bottom: 1vh;
-}
-
-.news-container{
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    scrollbar-gutter: both-edges;
-}
-
-.news{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    font-family: 'Indie Flower', cursive;
-    color: white;
-    font-size: 2vw;
-    padding-left: 2vw;
-    direction: rtl;
-}
-
-.scrollbar-back{
-    display: flex;
-    background-color: rgba(56,50,50,1);
-    margin-top: 14vh;
-    margin-right: 3vw;
-    width: 1vw;
-    border-radius: 5vw;
-    justify-content: center;
-}
-
-.scrollbar-bar{
-    position: absolute;
-
-    top: 20vh;
-    width: 0.8vw;
-    height: 20vh;
-    background-color: gray;
-    border-radius: 1vw;
+    .news-screen-anchor{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -5vh;
+    }
 }

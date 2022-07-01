@@ -1,0 +1,68 @@
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    opacity: 0;
+}
+
+.modal-content{
+    background-color: white;
+    width: 90vw;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+}
+
+.modal.active{
+    transform: scale(1);
+    z-index: 99;
+    pointer-events: all;
+    opacity: 1;
+}
+
+.modal-image{
+    width: 70vw;
+    height: 90vh;
+}
+
+.modal-description{
+    padding: 20px;
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-title{
+    font-size: 2.3vw;
+    color: orange;
+}
+
+.modal-subtitle{
+    font-size: 1.5vw;
+}
+
+.modal-video{
+    width: 70vw!important;
+    height: 90vh;
+}
+
+.modal-content video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}

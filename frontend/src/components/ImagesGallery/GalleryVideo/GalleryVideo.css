@@ -1,0 +1,22 @@
+.gallery-item video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+source{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+video:hover{
+    -webkit-filter: none;
+    filter: none;
+}

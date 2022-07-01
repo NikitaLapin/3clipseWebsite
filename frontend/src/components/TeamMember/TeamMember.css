@@ -1,0 +1,22 @@
+@media (orientation: landscape) {
+    .team-member{
+        display: flex;
+        margin: 1vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member-text{
+        width: auto;
+        font-size: 2vw;
+        font-family: 'Indie Flower', cursive;
+        color: white;
+        text-align: center;
+    }
+
+    .team-member-image{
+        width: 25vw;
+        height: 30vw;
+        object-fit: cover;
+    }
+}

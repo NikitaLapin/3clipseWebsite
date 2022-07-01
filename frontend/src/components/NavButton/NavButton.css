@@ -1,0 +1,20 @@
+.nav-button{
+    z-index: 2;
+    width: auto;
+    height: auto;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 0.1vw;
+    margin: 0.5vw;
+    font-size: 1.5vw;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+}
+
+.nav-button:hover{
+    transform: scale(1.1);
+}
+
+.nav-button:active{
+    color: gray;
+}

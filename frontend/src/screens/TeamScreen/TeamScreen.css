@@ -1,48 +1,46 @@
-.image-2{
-    z-index: 9;
-    display: flex;
-    position: absolute;
-    top: 730vh;
-    left: 17vw;
-    width: 60vw;
-    height: 35vh;
-    background-size: cover;
-    background-position: center;
-    background-image: url(./imports/3clipse_gallery1.jpg);
+@media (orientation: landscape){
+    .inspire-text{
+        margin-top: 5vh;
+        width: 40vw;
+        color: white;
+        display: flex;
+        font-size: 2.5vw;
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+    }
 
-    box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
-    filter: blur(0.2vh);
-}
+    .git-link{
+        position: relative;
+        top: 5vh;
+        width: 10vw;
+    }
 
-.team-info-container{
-    display: flex;
-    position: absolute;
-    top: 775vh;
+    .header-offset{
+        position: absolute;
+        top: 20vh;
+        font-size: 5vw;
+    }
 
-    width: 60vw;
-    height: 35vh;
+    .team-image{
+        display: flex;
+        width: 60vw;
+        height: 35vh;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../GalleryScreen/imports/images/3clipse_gallery1.jpg);
 
-    left: 17vw;
-    justify-content: center;
-    flex-direction: column;
-}
+        box-shadow: inset 5vh 3vw 3vw 1vw #000000, inset -5vh -3vw 3vw 1vw #000000;
+    }
 
-.team-text{
-    width: auto;
-    font-size: 2vw;
-    font-family: 'Indie Flower', cursive;
-    color: white;
-    text-align: center;
-}
+    .on-team-screen{
+        position: relative;
+    }
 
-.description{
-    padding-top: 2vh!important;
-    padding-left: 7vw!important;
-    max-width: 40vw!important;
-}
-
-.git-link{
-    position: absolute;
-    left: 25vw;
-    width: 10vw;
+    .team-screen-anchor{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 50px;
+        height: 50px;
+    }
 }

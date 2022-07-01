@@ -1,45 +1,48 @@
-.screen-filler{
-    display: flex;
-    z-index: 9;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(7, 15, 16, 1);
-    justify-content: space-around;
-}
+@media (orientation: landscape){
+    .screen-filler{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(./imports/main-background.jpg);
+        background-size: cover;
+        background-position: center;
+    }
 
-.background-image{
-    background-image: url(./imports/main-background.jpg);
-    background-size: cover;
-    background-position: center;
-    height: auto;
-    width: 100vw;
-    margin: 0 0;
-}
+    .info-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-.container-home{
-    position: absolute;
-    top: 6vh;
-    left: 20%;
-    width: 60vw;
-    height: 100vh;
-    justify-content: space-around;
-}
+        position: absolute;
+        top: 30vh;
+        left: 20vw
+    }
 
-.void-1{
-    position: relative;
-    width: inherit;
-    height: 20vh;
-}
+    .info-block-text{
+        position: relative;
+    }
 
-.infoblock-button{
-    background-image: url(../../components/nav-button/imports/OilPaint.png);
-    background-size: 100% 100%;
-    position: absolute;
-    width: 16vw;
-    top: 25vh;
-    left: 7vw;
-    padding: 0.1vw!important;
-    margin: 0.5vw!important;
-    font-size: 3vw!important;
-    font-family: 'Indie Flower', cursive;
+    .info-block-button{
+        position: relative;
+        width: 16vw!important;
+        height: 7vh!important;
+        top: 0.7vh;
+        font-size: 2.5vw!important;
+        background-image: url("../../components/NavButton/imports/OilPaint.png");
+    }
+
+    .left-offset{
+        position: relative;
+        left: 4vw;
+    }
+
+    .main-to-about-transition{
+        z-index: 5;
+        position: absolute;
+        top: 95vh;
+        background: linear-gradient(360deg, #000000 0%, #081214 69.37%, #09171A 101.65%, rgba(104, 104, 104, 0.5) 136.83%);
+        filter: blur(1vh);
+        height: 10vh;
+        width: 100vw;
+    }
 }

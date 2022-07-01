@@ -6,6 +6,7 @@ import GalleryScreen from "./screens/GalleryScreen/GalleryScreen";
 import TeamScreen from "./screens/TeamScreen/TeamScreen";
 
 const App = () => {
+
     return (
         <div className="App">
             <style>
@@ -13,15 +14,13 @@ const App = () => {
             </style>
             <meta name='viewport' content='width=1170'/>
 
-            <FirstScreen/>
-            <div className='transition-blur'/>
-            <AboutScreen/>
-            <div className='transition-blur-2'/>
-            <NewsScreen/>
-            <div className='transition-blur-3'/>
-            <div className='black-image-2'/>
-            <GalleryScreen/>
-            <TeamScreen/>
+            <div className='wrapper'>
+                <FirstScreen/>
+                <AboutScreen/>
+                <NewsScreen/>
+                <GalleryScreen/>
+                <TeamScreen/>
+            </div>
         </div>
     );
 }
