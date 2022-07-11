@@ -4,11 +4,16 @@
         flex-direction: row;
         padding: 5vh;
         height: auto;
-        max-width: 80vw;
+        width: 85vw;
         justify-content: space-between;
         align-items: center;
 
         overflow:hidden;
+    }
+
+    .news-row{
+        display: flex;
+        flex-direction: row;
     }
 
     .list-container{
@@ -23,6 +28,8 @@
         height: 2vw;
         background-image: url("imports/arrow-active.svg");
         cursor: pointer;
+        background-size: cover;
+        background-position: center;
     }
 
     .arrow-disabled{

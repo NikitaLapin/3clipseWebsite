@@ -48,4 +48,9 @@
         bottom: 85vh;
         right: -9vw;
     }
+
+    .gallery-screen-anchor{
+        position: absolute;
+        top: -20vh;
+    }
 }

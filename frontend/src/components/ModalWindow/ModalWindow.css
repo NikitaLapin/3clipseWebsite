@@ -15,13 +15,15 @@
 }
 
 .modal-content{
-    background-color: white;
+    background-color: black;
     width: 90vw;
     height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     z-index: 100;
+
+    border: 1px solid dimgray;
 }
 
 .modal.active{
@@ -38,11 +40,13 @@
 
 .modal-description{
     padding: 20px;
+    border: 1px solid dimgray;
     font-family: 'Indie Flower', cursive;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: white;
 }
 
 .modal-title{

@@ -33,7 +33,7 @@ const GalleryScreen = () => {
     return (
         <div className='black-box' style={{zIndex: 29}}>
             <div className='gallery-container'>
-                <div className='team-image on-gallery'/>
+                <div className='gallery-screen-anchor'/>
                 <div className='title'>
                     <Header titleorange='Gallery'/>
                 </div>

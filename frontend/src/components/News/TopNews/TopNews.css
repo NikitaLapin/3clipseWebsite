@@ -73,4 +73,9 @@
         align-items: center;
         justify-content: center;
     }
+
+    .top-news-anchor{
+        position: absolute;
+        top: -20vh;
+    }
 }

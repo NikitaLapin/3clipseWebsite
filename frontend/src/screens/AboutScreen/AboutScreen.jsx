@@ -2,6 +2,7 @@ import React from 'react';
 import './AboutScreen.css';
 import InfoCards from "../../components/InfoCards/InfoCards";
 import Header from "../../components/Header/Header";
+import {motion} from 'framer-motion';
 
 const AboutScreen = () => {
     const cards = [
@@ -9,7 +10,7 @@ const AboutScreen = () => {
             order: 1,
             isReversed: false,
             title: 'Economics',
-            description: 'Wartime economy is ruthless but full of opportunities - complete contracts, hunt for treasures, trade different goods and travel between the cities to make a coin.',
+            description: 'Wartime economy is ruthless but full of opportunities - complete contracts, hunt for treasures, trade different goods and travel between the cities to make a coin',
             src: require('../../screens/AboutScreen/imports/economics-icon.jpg')
         },
         {
@@ -46,12 +47,31 @@ const AboutScreen = () => {
     const description2 = ' In the world of Hition you’ll go on the adventure across corrupted lands ' +
         'where you’ll decide how to approach each battle and situation.'
 
+    const animations = {
+        initial: {opacity: 0},
+        animate: {opacity: 1}
+    }
+
+    const descriptionAnimations = {
+        initialUpper: {opacity: 0.5, y: 80},
+        initialBottom: {opacity: 0.5, y: -80},
+        animate: {opacity: 1, y: 0},
+    }
+
+
     return (
         <div className='black-box'>
             <div className='about-screen-anchor'/>
             <div className='header-wrapper'>
-                <Header titleorange='About 3' titlewhite='clipse' subtitle={description1} style={{marginBottom: 30}}/>
-                <Header subtitle={description2}/>
+                <motion.div variants={animations} initial='initial' whileInView='animate' transition={{duration: 5, type: 'spring'}}>
+                    <Header titleorange='About 3' titlewhite='clipse' style={{marginBottom: 30, cursor: 'pointer'}}/>
+                </motion.div>
+                <motion.div variants={descriptionAnimations} initial='initialUpper' whileInView='animate' transition={{duration: 0.5, ease: 'easeInOut'}}>
+                    <Header subtitle={description1} style={{marginBottom: 30}}/>
+                </motion.div>
+                <motion.div variants={descriptionAnimations} initial='initialBottom' whileInView='animate' transition={{duration: 0.5, ease: 'easeInOut'}}>
+                    <Header subtitle={description2}/>
+                </motion.div>
             </div>
             <InfoCards cards={cards}/>
         </div>

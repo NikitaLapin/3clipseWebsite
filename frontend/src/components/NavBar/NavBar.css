@@ -7,6 +7,8 @@
     height: 6vh;
     width: 100vw;
     background-color: transparent!important;
+    position: fixed!important;
+    top: 0;
 }
 
 .upper-blur{
@@ -16,8 +18,15 @@
     width: 100vw;
     height: inherit;
 
-    background-color: black;
-    filter: blur(1vh);
+    background-color: rgba(0,0,0,0.8);
+}
+
+.upper-panel.show .upper-panel{
+    display: initial;
+}
+
+.upper-panel.hide .upper-blur{
+    display: none;
 }
 
 .toolbar{
@@ -30,16 +39,18 @@
 @media (orientation: landscape) {
     .separator {
         font-size: 1vw !important;
+        cursor: default;
     }
 
     .logo {
         width: 5vw;
         height: auto;
         cursor: pointer;
+        object-fit: cover;
     }
 
     .logo:hover{
-        transform: scale(1.1);
+        transform: scale(1.1)!important;
     }
 
     .nav-buttons {
@@ -57,9 +68,11 @@
     }
 
     .button-active{
-        background-size: 100% 100%;
-        background-position: bottom;
-        background-image: url("./imports/OilPaint.png");
+        color: darkorange;
+    }
+
+    .logo.button-active{
+        filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(-20deg) saturate(600%) contrast(0.8);
     }
 
     .button-2 {
@@ -68,5 +81,49 @@
         padding-bottom: 1vh;
         height: 4vh!important;
         font-size: 2vw !important;
+    }
+
+    .follow-buttons{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reddit-button{
+        background-image: url("./imports/reddit-logo.svg");
+        background-position: center;
+        background-size: cover;
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .reddit-button:hover{
+        transform: scale(1.1);
+    }
+
+    .steam-button{
+        background-image: url("./imports/steam-logo.svg");
+        background-position: center;
+        background-size: 100% 100%;
+        width: 2.4vw;
+        height: 2.4vw;
+    }
+
+    .steam-button:hover{
+        transform: scale(1.1);
+    }
+
+    .telegram-button{
+        background-image: url("./imports/telegram-logo.svg");
+        background-position: center;
+        background-size: 100% 100%;
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .telegram-button:hover{
+        transform: scale(1.1);
     }
 }

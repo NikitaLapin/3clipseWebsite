@@ -12,6 +12,7 @@
         margin-left: 1vw;
         margin-right: 1vw;
         width: 28vw;
+        object-fit: cover;
     }
 
     .info-card-blur{
@@ -26,14 +27,30 @@
     }
 
     .card-text{
+        cursor: pointer;
         width: 30vw;
         font-size: 2vw;
         font-family: 'Indie Flower', cursive;
         color: white;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-text-subtitle{
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: white;
     }
 
     .card-text-title{
+        cursor: pointer!important;
+        all: inherit!important;
+        color: darkorange!important;
         font-size:  5.3vh!important;
     }
 }

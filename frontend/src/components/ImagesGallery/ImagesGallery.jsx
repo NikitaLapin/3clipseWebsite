@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import GalleryImage from "./GalleryImage/GalleryImage";
 import './ImagesGallery.css';
 import GalleryVideo from "./GalleryVideo/GalleryVideo";
 import ModalWindow from "../ModalWindow/ModalWindow";
+import {motion} from 'framer-motion';
+import {wait} from "@testing-library/user-event/dist/utils";
 
 const ImagesGallery = ({items, isVideos=false, ...props}) => {
     const chunk = (array, maxSize) => {
@@ -27,6 +29,9 @@ const ImagesGallery = ({items, isVideos=false, ...props}) => {
     const [open, setOpen] = useState(false);
     const [currentActiveImage, setCurrentActiveImage] = useState(items[0]);
 
+    const [isDragged, setIsDragged] = useState(false);
+    const galleryRow = useRef();
+
     return (
         <div>
             <ModalWindow active={open} setActive={setOpen}>
@@ -40,17 +45,26 @@ const ImagesGallery = ({items, isVideos=false, ...props}) => {
                 </div>
             </ModalWindow>
 
-            <div className='row'>
-                {chunks.map((chunk) => (
-                    <div className='column' key={chunk[0].id}>
-                        {chunk.map((item) => {
-                            if (isVideos) return <GalleryVideo video={item} key={item.id} setOpen={setOpen}
-                                                               setChildren={setCurrentActiveImage}/>;
-                            else return <GalleryImage image={item} key={item.id} setOpen={setOpen}
-                                                      setChildren={setCurrentActiveImage}/>
-                        })}
-                    </div>
-                ))}
+            <div className='row' ref={galleryRow}>
+                <motion.div className='gallery-row' drag='x' dragConstraints={galleryRow} onDragStart={() => setIsDragged(true)}>
+                    {chunks.map((chunk) => (
+                        <div className='column' key={chunk[0].id}>
+                            {chunk.map((item) => {
+                                if (isVideos) return (
+                                    <GalleryVideo video={item}
+                                                  key={item.id}
+                                                  setOpen={setOpen}
+                                                  setChildren={setCurrentActiveImage}
+                                                  isDragged={isDragged}
+                                                  setIsDragged={setIsDragged}
+                                    />);
+                                else return <GalleryImage image={item} key={item.id} setOpen={setOpen}
+                                                          setChildren={setCurrentActiveImage} isDragged={isDragged}
+                                                          setIsDragged={setIsDragged}/>
+                            })}
+                        </div>
+                    ))}
+                </motion.div>
             </div>
         </div>
     );

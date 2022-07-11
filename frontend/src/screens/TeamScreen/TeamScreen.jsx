@@ -16,8 +16,7 @@ const TeamScreen = () => {
     return (
         <div className='black-box'>
             <div className='team-screen-anchor'/>
-            <div className='team-image on-team-screen'/>
-            <div className='header-offset'>
+            <div>
                 <Header titleorange='Team' style={{fontsize: 'inherit'}}/>
             </div>
             <TeamList team={team}/>

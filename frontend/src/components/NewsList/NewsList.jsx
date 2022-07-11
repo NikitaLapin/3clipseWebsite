@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import TopNews from "../News/TopNews/TopNews";
 import './NewsList.css';
 import News from "../News/LatestNews/News";
+import {motion} from "framer-motion";
 
 const NewsList = ({newses, isTopList}) => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -21,22 +22,29 @@ const NewsList = ({newses, isTopList}) => {
         setAmountOfPages(Math.ceil(newses.length / pageLimit));
     }, [pageLimit])
 
+    const [isRight, setIsRight] = useState(true);
+
+
     return (
         <div className='newses'>
             <div className='list-container'>
                 <div className='newses-container'>
                     {currentPage > 0
                         ? <div className='arrow-active turn-left' onClick={(_) => {
-                            setCurrentPage(currentPage - 1)
+                            setCurrentPage(currentPage - 1);
+                            setIsRight(false);
                         }}/>
                         : <div className='arrow-disabled turn-left'/>
                     }
+                    <div className='news-row'>
                     {newses.slice(displayedNewsesStartId, displayedNewsesStartId + pageLimit).map((news) =>
-                        isTopList ? <TopNews news={news} key={news.id}/> : <News news={news} key={news.id}/>
+                            isTopList ? <TopNews news={news} key={news.id} isRight={isRight}/> : <News news={news} key={news.id} isRight={isRight}/>
                     )}
+                    </div>
                     {currentPage < amountOfPages - 1
                         ? <div className='arrow-active turn-right' onClick={(_) => {
-                            setCurrentPage(currentPage + 1)
+                            setCurrentPage(currentPage + 1);
+                            setIsRight(true);
                         }}/>
                         : <div className='arrow-disabled turn-right'/>
                     }
