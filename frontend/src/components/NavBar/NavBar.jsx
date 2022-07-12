@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppBar, Toolbar, Typography} from "@mui/material";
+import {AppBar, Toolbar} from "@mui/material";
 import NavButton from "../NavButton/NavButton"
 import { Link } from "react-scroll";
 import './NavBar.css';
@@ -63,7 +63,6 @@ class NavBar extends React.Component {
     }
 
     render() {
-
         const animations = {
             initial: {opacity: 0, y: -100},
             animate: {opacity: 1, y: 0}

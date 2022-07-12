@@ -43,33 +43,35 @@ const AboutScreen = () => {
         }
     ]
     const description1 = '3clipse is challenging action-RPG where your tactical skills will be tested in battles with ' +
-        'enemies, diseases and nature alike.'
+        'enemies, diseases and nature alike.';
     const description2 = ' In the world of Hition you’ll go on the adventure across corrupted lands ' +
-        'where you’ll decide how to approach each battle and situation.'
+        'where you’ll decide how to approach each battle and situation.';
 
-    const animations = {
+    const titleAnimations = {
         initial: {opacity: 0},
         animate: {opacity: 1}
-    }
+    };
+    const titleTransition = {duration: 5, type: 'spring'};
 
     const descriptionAnimations = {
         initialUpper: {opacity: 0.5, y: 80},
         initialBottom: {opacity: 0.5, y: -80},
         animate: {opacity: 1, y: 0},
     }
+    const descriptionTransition = {duration: 0.5, ease: 'easeInOut'}
 
 
     return (
         <div className='black-box'>
             <div className='about-screen-anchor'/>
             <div className='header-wrapper'>
-                <motion.div variants={animations} initial='initial' whileInView='animate' transition={{duration: 5, type: 'spring'}}>
-                    <Header titleorange='About 3' titlewhite='clipse' style={{marginBottom: 30, cursor: 'pointer'}}/>
+                <motion.div variants={titleAnimations} initial='initial' whileInView='animate' transition={titleTransition} className='bottom-margin'>
+                    <Header titleorange='About 3' titlewhite='clipse'/>
                 </motion.div>
-                <motion.div variants={descriptionAnimations} initial='initialUpper' whileInView='animate' transition={{duration: 0.5, ease: 'easeInOut'}}>
-                    <Header subtitle={description1} style={{marginBottom: 30}}/>
+                <motion.div variants={descriptionAnimations} initial='initialUpper' whileInView='animate' transition={descriptionTransition} className='bottom-margin'>
+                    <Header subtitle={description1}/>
                 </motion.div>
-                <motion.div variants={descriptionAnimations} initial='initialBottom' whileInView='animate' transition={{duration: 0.5, ease: 'easeInOut'}}>
+                <motion.div variants={descriptionAnimations} initial='initialBottom' whileInView='animate' transition={descriptionTransition} className='bottom-margin'>
                     <Header subtitle={description2}/>
                 </motion.div>
             </div>

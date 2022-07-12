@@ -53,23 +53,29 @@
 
     .news-title{
         color: darkorange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         font-size: 4vh;
+        margin: 1vh;
         font-family: 'Indie Flower', cursive;
+        height: 20%;
     }
 
     .news-description{
         color: white;
         margin: 1vh;
-        font-size: 2.6vh;
-        text-align: center;
+        font-size: 2.6vh!important;
+        text-align: center!important;
+        height: 25%!important;
 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        line-clamp: 4;
-        -webkit-box-orient: vertical;
+        overflow: hidden!important;
+        text-overflow: ellipsis!important;
+        display: -webkit-box!important;
+        -webkit-line-clamp: 4!important;
+        line-clamp: 4!important;
+        -webkit-box-orient: vertical!important;
     }
 
     .star{

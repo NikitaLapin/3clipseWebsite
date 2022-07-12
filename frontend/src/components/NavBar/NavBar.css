@@ -1,42 +1,42 @@
-.upper-panel{
-    z-index: 10;
-
-    display: flex;
-    justify-content: center;
-
-    height: 6vh;
-    width: 100vw;
-    background-color: transparent!important;
-    position: fixed!important;
-    top: 0;
-}
-
-.upper-blur{
-    z-index: 4;
-    position: absolute;
-
-    width: 100vw;
-    height: inherit;
-
-    background-color: rgba(0,0,0,0.8);
-}
-
-.upper-panel.show .upper-panel{
-    display: initial;
-}
-
-.upper-panel.hide .upper-blur{
-    display: none;
-}
-
-.toolbar{
-    align-self: center;
-    justify-content: space-between;
-    z-index: 5;
-    width: 60vw;
-}
-
 @media (orientation: landscape) {
+    .upper-panel{
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+
+        height: 6vh;
+        width: 100vw;
+        background-color: transparent!important;
+        position: fixed!important;
+        top: 0;
+    }
+
+    .upper-blur{
+        z-index: 4;
+        position: absolute;
+
+        width: 100vw;
+        height: inherit;
+
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .upper-panel.show .upper-panel{
+        display: initial;
+    }
+
+    .upper-panel.hide .upper-blur{
+        display: none;
+    }
+
+    .toolbar{
+        align-self: center;
+        justify-content: space-between;
+        z-index: 5;
+        width: 60vw;
+    }
+
     .separator {
         font-size: 1vw !important;
         cursor: default;

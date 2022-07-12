@@ -9,9 +9,11 @@ const ModalWindow = ({active, setActive, children}) => {
     }, [active])
 
     return (
-        <div className={active ? 'modal active' : 'modal'} onClick={() => setActive(false)}>
-            <div className='modal-content' onClick={e => e.stopPropagation()}>
-                {children}
+        <div>
+            <div className={active ? 'modal active' : 'modal'} onClick={() => setActive(false)}>
+                <div className='modal-content' onClick={e => e.stopPropagation()}>
+                    {children}
+                </div>
             </div>
         </div>
     );

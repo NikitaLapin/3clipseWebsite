@@ -3,10 +3,14 @@
         margin-top: 5vh;
         width: 40vw;
         color: white;
-        display: flex;
         font-size: 2.5vw;
         text-align: center;
         font-family: 'Indie Flower', cursive;
+        display: inline-block;
+    }
+
+    .inspire-text::first-letter{
+        font-size: 3.4vw;
     }
 
     .git-link{

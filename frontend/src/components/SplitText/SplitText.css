@@ -1,0 +1,16 @@
+.split-text{
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.split-text-word:hover{
+    color: orange;
+    transition-duration: 0.1s;
+}
+
+.split-text-word{
+    width: auto;
+}

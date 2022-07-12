@@ -174,16 +174,17 @@ const NewsScreen = () => {
         initial: {opacity: 0, y: -150},
         animate: {opacity: 1, y: 0},
     }
+    const transition = {duration: 1};
 
     return (
         <div className='black-box'>
             <div className='news-screen-anchor'/>
             <div className='container'>
-                <motion.div variants={animations} initial='initial' whileInView='animate' transition={{duration: 1}}>
-                    <Header titleorange='Latest' titlewhite={' ' + 'News'}/>
+                <motion.div variants={animations} initial='initial' whileInView='animate' transition={transition}>
+                    <Header titleorange='Latest N' titlewhite={'ews'}/>
                 </motion.div>
                 <NewsList newses={newses} isTopList={false}/>
-                <Header titleorange='Top' titlewhite='News'/>
+                    <Header titleorange='Top N' titlewhite='ews'/>
                 <NewsList newses={newses.filter((news) => news.isImportant)} isTopList={true}/>
             </div>
         </div>

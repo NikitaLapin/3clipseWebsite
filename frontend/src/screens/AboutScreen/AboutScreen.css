@@ -1,21 +1,27 @@
-.black-box{
-    z-index: 20;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    background-color: black;
-    align-items: center;
-    padding-top: 8vh;
-    padding-bottom: 8vh;
-}
+@media (orientation: landscape) {
+    .black-box {
+        z-index: 20;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background-color: black;
+        align-items: center;
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+    }
 
-.header-wrapper{
-    width: 57vw;
-}
+    .header-wrapper {
+        width: 57vw;
+    }
 
-.about-screen-anchor{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: -1vh;
+    .about-screen-anchor {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -1vh;
+    }
+
+    .bottom-margin {
+        margin-bottom: 3vh;
+    }
 }

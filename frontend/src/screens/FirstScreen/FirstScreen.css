@@ -22,21 +22,8 @@
         position: relative;
     }
 
-    .split-text{
-        color: white;
-        font-family: 'Indie Flower', cursive;
+    .info-block-subtext{
         font-size: 2vw;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    .split-text-word:hover{
-        color: orange;
-        transition-duration: 0.1s;
-    }
-
-    .split-text-word{
-        width: auto;
     }
 
     .info-block-button{

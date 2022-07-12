@@ -70,7 +70,7 @@
         font-size: 5vh;
     }
 
-    .news-page:first-letter{
-        color: white;
+    .news-page.news-title:first-letter{
+        color: white!important;
     }
 }

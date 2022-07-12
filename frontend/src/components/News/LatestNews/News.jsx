@@ -3,8 +3,9 @@ import './News.css';
 import {Tooltip} from "@mui/material";
 import {Link} from 'react-scroll';
 import {motion} from 'framer-motion';
+import SplitText from "../../SplitText/SplitText";
 
-const News = ({news, isRight, ...props}) => {
+const News = ({news, isRight}) => {
 
     function DisplayImportance() {
         if (news.isImportant) {
@@ -27,7 +28,8 @@ const News = ({news, isRight, ...props}) => {
     let currentInitial = isRight ? animations.initial1 : animations.initial;
 
     return (
-        <motion.a href={news.href} target='_blank' style={{textDecoration: 'none'}} variants={animations} initial={currentInitial} animate='animate' exit='exit'>
+        <motion.a href={news.href} target='_blank' style={{textDecoration: 'none'}} variants={animations}
+                  initial={currentInitial} animate='animate'>
             <div className='news-container'>
                 <div className='news-image'>
                     <img src={news.src} alt={news.name}/>
@@ -38,7 +40,7 @@ const News = ({news, isRight, ...props}) => {
                     <DisplayImportance/>
                 </div>
                 <div className='news-title'>{news.name}</div>
-                <div className='news-description'>{news.description}</div>
+                <SplitText description={news.description} className='news-description'/>
             </div>
         </motion.a>
     );

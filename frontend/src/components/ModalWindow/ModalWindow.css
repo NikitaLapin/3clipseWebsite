@@ -5,13 +5,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    transform: scale(0);
     justify-content: center;
     align-items: center;
-    transform: scale(0);
     overflow: hidden;
     scroll-behavior: smooth;
-    opacity: 0;
 }
 
 .modal-content{
@@ -27,15 +25,17 @@
 }
 
 .modal.active{
+    transition: 0.5s;
     transform: scale(1);
     z-index: 99;
     pointer-events: all;
-    opacity: 1;
+    display: flex;
 }
 
 .modal-image{
     width: 70vw;
     height: 90vh;
+    object-fit: cover;
 }
 
 .modal-description{

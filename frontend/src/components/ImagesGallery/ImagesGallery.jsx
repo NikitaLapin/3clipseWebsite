@@ -4,7 +4,6 @@ import './ImagesGallery.css';
 import GalleryVideo from "./GalleryVideo/GalleryVideo";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import {motion} from 'framer-motion';
-import {wait} from "@testing-library/user-event/dist/utils";
 
 const ImagesGallery = ({items, isVideos=false, ...props}) => {
     const chunk = (array, maxSize) => {
@@ -22,6 +21,7 @@ const ImagesGallery = ({items, isVideos=false, ...props}) => {
 
     const [chunks, setChunks] = useState([]);
     const [maxImagesInColumn, setMaxImagesInColumn] = useState(3);
+
     useEffect(() => {
         setChunks(chunk(items, maxImagesInColumn));
     }, [maxImagesInColumn]);
@@ -46,7 +46,8 @@ const ImagesGallery = ({items, isVideos=false, ...props}) => {
             </ModalWindow>
 
             <div className='row' ref={galleryRow}>
-                <motion.div className='gallery-row' drag='x' dragConstraints={galleryRow} onDragStart={() => setIsDragged(true)}>
+                <motion.div className='gallery-row' drag='x' dragConstraints={galleryRow}
+                            onDragStart={() => setIsDragged(true)}>
                     {chunks.map((chunk) => (
                         <div className='column' key={chunk[0].id}>
                             {chunk.map((item) => {
